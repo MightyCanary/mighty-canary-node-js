@@ -1,0 +1,16 @@
+{
+  "name": "mighty-canary-js-example",
+  "version": "0.1.0",
+  "description": "A simple website built which uses Mighty Canary",
+  "main": "server.js",
+  "scripts": {
+    "start": ""
+  },
+  "author": "Alex Kovtunov",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.16.3",
+    "superagent": "^8.0.0"
+  }
+}
