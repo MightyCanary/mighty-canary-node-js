@@ -1,18 +1,20 @@
+//////////////////////////// Edit Here /////////////////////////////////////////
+api_token = 'YOUR_API_TOKEN' // Your API Token
+canary_url = 'https://app.mightycanary.com/api/v1/canaries/CANARY_UID/show' // Your Canary URL
+sentry_url = 'https://app.mightycanary.com/api/v1/sentries/SENTRY_UID' // Your Sentry URL
+////////////////////////////////////////////////////////////////////////////////
+
 const express = require('express');
 const superagent = require('superagent');
 const app = express();
 const path = require('path');
 
-const server = app.listen(7000, () => {
+const server = app.listen(3000, () => {
   console.log(`Express running → PORT ${server.address().port}`);
 });
 
 
 app.engine('html', require('ejs').renderFile);
-
-canary_url = 'YOUR_CANARY_URL'
-sentry_url = 'YOUR_SENTRY_URL'
-api_token = 'YOUR_API_TOKEN'
 
 function update_sentry(sentry, token, params) {
   console.log(`Sending data ← ${JSON.stringify(params)}`);
