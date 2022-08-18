@@ -37,7 +37,7 @@ app.get('/happy', (req, res) => {
   update_sentry(sentry_url, api_token, { state: 'happy' }).then(function(rv) {
     console.log(`Received response → ${rv["name"]} → ${rv["state"]}`);
   });
-  res.redirect('/');
+  res.status(200);
 });
 
 app.get('/sick', (req, res) => {
@@ -45,5 +45,5 @@ app.get('/sick', (req, res) => {
   update_sentry(sentry_url, api_token, { state: 'sick' }).then(function(rv) {
     console.log(`Received response → ${rv["name"]} → ${rv["state"]}`);
   });
-  res.redirect('/');
+  res.status(200);
 });
